@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrom Array</title>
+</head>
+<body>
+    <script>
+        // getting input size of array
+        var myinputarr = [];
+        var a = prompt('Enter the size of Array ....');
+        var size = a;
+        // entering the array elements
+        for (var i = 0;i < size; i++) {
+             myinputarr[i] = prompt('Enter array Element ....   '+(i+1) );
+        }
+        // checking  entered array is palindrom or not
+        function checkarraypalindrome(myinputarr, n) {
+            let temp = 0;
+            for (let i = 0; i <= n / 2 && n != 0; i++) {
+                if (myinputarr[i] != myinputarr[n - i - 1]) {
+                    temp = 1;
+                    break;
+                }
+            }
+            if (temp == 1)
+                alert(" This Array is Not Palindrome 👎🙁");
+            else
+                alert(" This Array is Palindrome 👍😉");
+        }
+        let n = myinputarr.length;
+        checkarraypalindrome(myinputarr, n);
+
+    </script>
+</body>
+
+</html>

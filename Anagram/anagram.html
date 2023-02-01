@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> String Anagram</title>
+</head>
+<body>
+<script>
+function anagram() 
+{   
+    // getting input from user
+    var inputstr1 = prompt("enter first string");
+    var inputstr2 = prompt("enter second string");
+    // checking the length of the both string
+    let len1 = inputstr1.length;
+   let len2 = inputstr2.length;
+   if(len1 !== len2){
+    alert("Invalid Input ❌");
+   }
+    // checking both entered string are anagram or not 
+    var str11 = inputstr1.split('').sort().join('');
+    var str22 = inputstr2.split('').sort().join('');
+        if(str11 === str22)
+           {
+             alert("It's Anagram 👍");  
+           }
+         else 
+         { 
+            alert("It's not Anagram 👎");
+         }
+    }
+    anagram()
+</script> 
+</body>
+</html>
